@@ -8,4 +8,4 @@ RUN echo "@prev http://dl-cdn.alpinelinux.org/alpine/v3.6/main" >> /etc/apk/repo
 RUN apk --no-cache add postgresql@prev=9.6.10-r0 postgresql-dev@prev=9.6.10-r0
 
 # Install uWSGI
-RUN pip install --no-cache-dir uwsgi
+RUN pip install --upgrade pip && pip install --no-cache-dir uwsgi
